@@ -26,57 +26,57 @@ function countingCards(card) {
     }
   }
 
-//Recorrd Collection
+// //Recorrd Collection
 
-var collection = {
-    2548: {
-      album: "Slippery When Wet",
-      artist: "Bon Jovi",
-      tracks: [
-        "Let It Rock",
-        "You Give Love a Bad Name"
-      ]
-    },
-    2468: {
-      album: "1999",
-      artist: "Prince",
-      tracks: [
-        "1999",
-        "Little Red Corvette"
-      ]
-    },
-    1245: {
-      artist: "Robert Palmer",
-      tracks: [ ]
-    },
-    5439: {
-      album: "ABBA Gold"
-    }
-  };
+// var collection = {
+//     2548: {
+//       album: "Slippery When Wet",
+//       artist: "Bon Jovi",
+//       tracks: [
+//         "Let It Rock",
+//         "You Give Love a Bad Name"
+//       ]
+//     },
+//     2468: {
+//       album: "1999",
+//       artist: "Prince",
+//       tracks: [
+//         "1999",
+//         "Little Red Corvette"
+//       ]
+//     },
+//     1245: {
+//       artist: "Robert Palmer",
+//       tracks: [ ]
+//     },
+//     5439: {
+//       album: "ABBA Gold"
+//     }
+//   };
   
 
-  function updateRecords(id, prop, value) {
-    if (prop !== "tracks" && value !== "") {
-      collection[id][prop] = value;
-    } else if (collection[id].hasOwnProperty("tracks") == false ) {
-      collection[id][prop] = [];
-      collection[id][prop].push(value);
-    } else if (value == "") {
-      delete collection[id][prop];
-    } else {
-      collection[id][prop].push(value)
-    }
+//   function updateRecords(id, prop, value) {
+//     if (prop !== "tracks" && value !== "") {
+//       collection[id][prop] = value;
+//     } else if (collection[id].hasOwnProperty("tracks") == false ) {
+//       collection[id][prop] = [];
+//       collection[id][prop].push(value);
+//     } else if (value == "") {
+//       delete collection[id][prop];
+//     } else {
+//       collection[id][prop].push(value)
+//     }
   
-    return collection;
-  }
+//     return collection;
+//   }
   
-  updateRecords(5439, "artist", "ABBA");
+//   updateRecords(5439, "artist", "ABBA");
   
-// Iterate odd numbers with a for loop
-var myArray = [];
-for (var nums = 1; nums < 10; nums += 2) {
-  myArray.push(nums);
-}
+// // Iterate odd numbers with a for loop
+// var myArray = [];
+// for (var nums = 1; nums < 10; nums += 2) {
+//   myArray.push(nums);
+// }
 
 //profile lookup
 // Setup
@@ -111,17 +111,17 @@ var contacts = [
 function lookUpProfile(name, prop){
 // Only change code below this line
 for (var nums = 0; nums < contacts.length; nums += 1) {
-    if (contacts[nums].firstName === name) {
+    if (contacts[nums].firstName === name || contacts[nums].lastName === name) {
         if (contacts[nums].hasOwnProperty(prop)) {
             return contacts[nums][prop];
         } else return "No such property"
     } 
 } 
 return "No such contact"
-// Only change code above this line
+
 }
 
-lookUpProfile("Akira", "likes");
+
 
 //generate random whole numbers within range
 function randomRange(myMin, myMax) {
@@ -153,3 +153,6 @@ function checking(theArray, searchForThis) {
 
 
 //Use typeof to Check the Type of a Variable
+function gettinTheType(someVar) {
+    return typeof(someVar);
+}
